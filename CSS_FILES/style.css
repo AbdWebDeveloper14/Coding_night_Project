@@ -1,9 +1,196 @@
-/* index.html css */
-*{
-    border: 1px solid red;
-}
 body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #F9F8FF;
 }
+*{
+    /* border: 1px solid red; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* form started here*/
+.main_div{
+    width: auto;
+    max-width: 600px;
+    align-self: center;
+    height: auto;
+    padding: 10px;
+    border-radius: 10px;
+    background-color:#F9F8FF;
+    display: flex;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 5px 10px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.heading_1{
+    color:white;
+    font-weight: 700;
+    font-size: 24px;
+    align-self: center;
+}
+.heading_2{
+    color:white;
+    font-weight: 400;
+    font-size: 18px;
+    align-self: center;
+}
+
+/* form part */
+
+.form_div{
+    align-items: start;
+    text-align: start;
+    justify-content: flex-start;
+    padding: 20px 50px;
+    flex: 1;
+    min-width: 300px;
+    align-self: center !important;
+
+}
+.heading_3{
+    color: black;
+    font-size: 30px;
+    font-weight: 700;
+
+}
+.heading_4{
+   color:grey;
+   font-size: 18;
+   font-weight: 400;
+}
+.form {
+    width: 100%;
+    max-width: 500px;
+}
+
+.form input {
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    padding: 10px;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+.form #userName, #email{
+       width: 95%;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    padding: 10px;
+    font-size: 18px;
+    flex: 1;
+}
+#userName:focus, #userName:hover, #firstName:hover, #lastName:hover, #email:hover, #password:hover, #cPassword:hover{
+    border: 1px solid #4530c9;
+}
+
+
+.name_feilds,
+.password_feilds {
+    display: flex;
+    justify-content: space-between !important;
+    width: 100%;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.name_feilds input,
+.password_feilds input {
+    width: 50% !important;
+}
+.submit_Btn{
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    background-color: #634dee;
+    color: white;
+    font-weight: 700;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.submit_Btn:hover{
+    background-color: #4838B2;
+}
+.hr_inlining{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.signinwithgoogle{
+ background: transparent;
+height: 50px;
+ width: 100%;
+ color: grey;
+ font-weight:500;
+ border: 1px solid grey;
+ cursor: pointer;
+ transition: 0.5s;
+ border-radius: 25px;
+ font-size: 16px;
+ text-align: center;
+ margin-bottom: 10px;
+}
+.signinwithgoogle:hover{
+    border: 1px solid #634dee;
+}
+.login_page{
+    color: #5B47E0;
+    list-style: none;
+    text-decoration: none;
+    font-weight: 600;
+}
+/* media qurey */
+
+
+@media (max-width: 1024px) {
+    .img_div {
+        display: none;
+    }
+}
+
+@media (max-width: 426px) {
+    .form_div{
+        padding-left: 5px;
+    }
+  
+    #userName,
+    #email,
+    #firstName,
+    #lastName,
+    #password,
+    #cPassword {
+        width: 95% !important;
+        margin-bottom: 10px;
+    }
+
+    .name_feilds,
+    .password_feilds {
+       display: block !important;
+        /* gap: 5px; */
+    }
+
+    .name_feilds input,
+    .password_feilds input {
+        width: 100% !important;
+    }
+
+    .form_div {
+        padding: 20px;
+    }
+} 
+.forgot{
+    color: #634dee;
+    position: relative;
+    font-weight: 500;
+    right: 0;
+    cursor: pointer;
+}
+/* 
+

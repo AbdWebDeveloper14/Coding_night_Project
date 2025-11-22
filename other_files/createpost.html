@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linkify Feed</title>
+    <link rel="stylesheet" href="/CSS_FILES/createpost.css">
+</head>
+<body>
+
+<header class="header">
+    <div>    
+        <span class="header_icon">Linkify</span>
+    </div>
+    <div>
+        <img src="/ASSESTS/switch (1).png" width="40px" alt="">
+    </div>
+</header>
+<div>
+<center>
+        <div class="main_div">
+            <div class="searchBox">
+                <input type="text" id="searchInput" placeholder="Search..." onkeyup="searchPosts()">
+            </div>
+            
+    <div class="searchinginput_post">
+        <button id="postingBtn" class="postBtn">Post What's in your mind</button>
+    </div>
+    
+    <div id="sorting">
+        <select id="sortSelect">
+            <option value="latest">Latest</option>
+            <option value="oldest">Oldest</option>
+        </select>
+    </div>
+    
+    <div id="posting_area"></div>
+    
+</div>
+</center>
+
+</div>
+<!-- MODAL -->
+<div id="postModal" class="modal">
+    <div class="modal-content">
+        <span id="closeModal" class="closeBtn">&times;</span>
+        <h2>Create Post</h2>
+        
+        <input type="text" id="post_title" placeholder="Enter title...">
+        <textarea id="post_desc" placeholder="Enter description..."></textarea>
+        <input type="text" id="post_img" placeholder="Image URL (optional)">
+        
+        <button id="createPostBtn" class="postNow">Post Now</button>
+    </div>
+</div>
+
+<script src="/JS_Files/createpost.js"></script>
+
+<!-- 🔍 SEARCH FUNCTION -->
+<script>
+    function searchPosts() {
+        let input = document.getElementById("searchInput").value.toLowerCase();
+        let posts = document.getElementsByClassName("postCard");
+
+    for (let p of posts) {
+        let text = p.innerText.toLowerCase();
+        p.style.display = text.includes(input) ? "block" : "none";
+    }
+}
+</script>
+
+</body>
+</html>
