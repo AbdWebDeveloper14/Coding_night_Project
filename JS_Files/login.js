@@ -28,7 +28,7 @@ document.querySelector("#login").addEventListener("click", function() {
         alert("Login successful!");
         localStorage.setItem("loggedInUser", JSON.stringify(isExist));
 
-        window.location = "others_files/createpost.html";
+        window.location = "/other_files/createpost.html";
 
     } else {
         alert("Incorrect Password");
